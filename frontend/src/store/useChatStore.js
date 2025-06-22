@@ -30,7 +30,7 @@ export const useChatStore = create((set,get) => ({
     set({isMessageLoading : true})
     try {
         if (!userId) return;
-        const res = await axiosinstance.get(`/message/${userId}`)
+        const res = await axiosinstance.get(`/message/msg/${userId}`)
         set({messages : res.data})
         
     } catch (error) {
