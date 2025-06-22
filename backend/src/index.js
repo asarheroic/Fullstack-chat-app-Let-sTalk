@@ -15,7 +15,7 @@ const path =  require('path')
 config()
 connectDB()
 const port = process.env.PORT
-const __dirname = path.resolve()
+
 
 app.use(express.json({ limit: '5mb' })); // or more if needed
 
