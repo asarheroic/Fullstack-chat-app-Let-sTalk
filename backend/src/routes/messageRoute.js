@@ -5,7 +5,7 @@ const { getUsersForSidebar, getmessages, sentMessages } = require("../controller
 const router = express.Router()
 
 router.get('/users',authMiddleware, getUsersForSidebar)
-router.get('/msg/:id',authMiddleware, getmessages)
+router.get('/:id',authMiddleware, getmessages)
 router.post('/send/:id' ,authMiddleware,sentMessages )
 
 module.exports = router
